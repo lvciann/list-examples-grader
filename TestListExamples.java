@@ -1,5 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.*;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,8 +23,9 @@ public class TestListExamples {
  
  @Test(timeout = 500)
  public void testFilter(){
-   List <String> arr1 = new List<>{"moon", "sky", "twilight", "dusk"} 
-   List <String> arrFilter1 = arr.filter();
-   assert.equals(arrfilter[0], "moon");
+   List <String> test1 = Arrays.asList("moon", "sky", "twilight", "dusk", "lightmoon");
+   List <String> expectedtest1 = Arrays.asList("moon", "lightmoon");
+   List <String> arrFilter1 = test1.filter();
+   assertEquals(expectedtest1, arrFilter1);
  }
 }
